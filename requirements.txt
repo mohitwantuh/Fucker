@@ -9,10 +9,10 @@ humanize
 httpx
 heroku3
 requests
-motor==2.5.1
 opencv-python-headless
 pyrogram==2.0.106
-pymongo==4.3.2
+motor==2.5.1
+pymongo==3.12.3
 python-dotenv
 pymediainfo
 prettytable
