@@ -1,5 +1,5 @@
 from RAUSHAN import app, API_ID, API_HASH
-from config import ALIVE_PIC
+from config import ALIVE_PIC, OWNER_ID
 from pyrogram import filters
 import os
 import re
@@ -15,15 +15,15 @@ PHONE_NUMBER_TEXT = (
 @app.on_message(filters.command("start"))
 async def hello(client: app, message):
     buttons = [
-           [
-                InlineKeyboardButton("˹ 𝐎ᴡɴᴇʀ ˼", url="https://t.me/ownerofbanner"),
-                InlineKeyboardButton("˹ 𝐔ᴘᴅᴀᴛᴇ ˼", url="https://t.me/sukhxmohit"),
-            ],
-            [
-                InlineKeyboardButton("˹ 𝐒ᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/SUKHXMOHIT_CHAT"),
-                InlineKeyboardButton("˹ 𝐌ᴜsɪᴄ ˼", url="https://t.me/MOHITMUSIC_BOT"),
-            ],
-            ]
+    [
+        InlineKeyboardButton("˹ 𝐎ᴡɴᴇʀ ˼", url="https://t.me/YKRAPIST"),
+        InlineKeyboardButton("˹ 𝐔ᴘᴅᴀᴛᴇ ˼", url="https://t.me/OWNER_MOHIT"),
+    ],
+    [
+        InlineKeyboardButton("˹ 𝐒ᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/MOHITSUPPORT"),
+        InlineKeyboardButton("˹ 𝐌ᴜsɪᴄ ˼", url="https://t.me/MOHITMUSIC_BOT"),
+    ],
+]
     reply_markup = InlineKeyboardMarkup(buttons)
     await client.send_photo(message.chat.id, ALIVE_PIC, caption=PHONE_NUMBER_TEXT, reply_markup=reply_markup)
 
